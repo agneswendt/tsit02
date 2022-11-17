@@ -19,7 +19,7 @@
 //document.csrfForm.submit();
 $(document).ready(function(){
     $("button").click(function(){
-      $("#div1").load("https://snickerboa.it.liu.se/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588",function(responseTxt,statusTxt,xhr){
+      $("#div1").load("/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588",function(responseTxt,statusTxt,xhr){
         if(statusTxt=="success")
           alert("External content loaded successfully!");
         if(statusTxt=="error")
